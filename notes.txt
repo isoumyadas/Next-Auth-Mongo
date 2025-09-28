@@ -1,0 +1,20 @@
+src
+    app
+        contact
+            page.tsx (route name is /contact)
+        
+        api (backend is written, nextAuth)
+            login
+                route.ts
+        
+        helpers
+    
+    
+
+How verify token & forgot pass works?
+    1. generates token and the expiry
+    2. saves in DB and sends to user via email (for verification)
+    3. When user clicks on the link
+        3.1 query runs to check if user clicked token and db stored token is same? if yes then user is verified  : if no then user is not verified
+        3.2 same for time too.
+    4. Same is also done with forgotPassword
