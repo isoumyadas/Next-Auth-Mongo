@@ -18,3 +18,26 @@ How verify token & forgot pass works?
         3.1 query runs to check if user clicked token and db stored token is same? if yes then user is verified  : if no then user is not verified
         3.2 same for time too.
     4. Same is also done with forgotPassword
+
+
+// What to use redirect or router?
+
+- You should use the redirect function for server-side redirects and the useRouter hook for client-side navigation.
+- A server-side redirect causes a full page reload, while client-side navigation with useRouter provides a smooth, app-like transition without a reload.
+
+
+redirect useCases:
+- Server Components, Route Handlers, Server Actions, getServerSideProps.
+- Enforcing rules, like authentication. Handling server-side form submissions.
+
+useRouter() hook useCases:
+- Client Components ("use client") only
+- Navigating programmatically after a user action (e.g., login button click).
+
+import useRouter hook from next/navigation because next/router was used for page router and next/navigation is used for App Router.
+
+
+// What does dynamic routes mean?
+=> ex: in profile we have another folder named as [userId], this mean /profile/..., whatever route you have put is known as dynamic route
+
+```      <Link href={`/profile/${data}`}>{data}</Link>              ```
